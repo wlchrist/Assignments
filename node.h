@@ -14,7 +14,7 @@
 using std::string;
 using std::iostream;
 
-typename<class T> {
+template<class T> 
     class Node {
     private:
         T data;
@@ -53,7 +53,6 @@ typename<class T> {
         void setNext(Node<T>* node) {
             next = node;
         }
-    }
-};
+    };
 
 #endif

@@ -8,23 +8,19 @@
 #define LINKEDLIST_H
 #include <string>
 #include <iostream>
-
+#include "node.h"
 
 using std::string;
-using std::iostream;
 
 template <class T>
 class LinkedList {
 private:
     
-    Node<T> head*;
+    Node<T>* head;
 public:
-    // public
     
     // Constructor
-    LinkedList() {
-        head = nullptr;
-    }
+    LinkedList() : head(nullptr) {};
 
     // Destructor
     ~LinkedList() {
@@ -43,7 +39,7 @@ public:
         head = newNode;
     }
 
-    // Head Getter
+    // Getter
     Node<T>* getHead() const {
         return head;
     }
@@ -52,8 +48,11 @@ public:
     void display() const {
         Node<T>* current = head;
         while (current != nullptr) {
+            std::cout << "- ";
+            std::cout << current->getData() << std::endl;
             current = current->getNext();
         }
+        std::cout << "nullptr" << std::endl;
     }
 };
 

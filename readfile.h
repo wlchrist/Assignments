@@ -9,8 +9,8 @@
 #include <string>
 #include <fstream>
 #include <filesystem>
-#include "linkedlist.h"
 #include <sstream>
+#include "linkedlist.h"
 #include "data.h"
 
 bool readAndStore() {
@@ -44,7 +44,8 @@ bool readAndStore() {
             list.insertAtFront(data);         
         }
     }
-    list.display();   
+    list.display();
     commandsfile.close();
     return true;
 }
+

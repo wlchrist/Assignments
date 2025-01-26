@@ -53,6 +53,7 @@ template<class T>
         void setNext(Node<T>* node) {
             next = node;
         }
+
     };
 
 #endif

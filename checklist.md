@@ -26,35 +26,35 @@
 ---
 
 ## Main Menu Requirement (3 Points)
-- [ ] **3 pts**: Main menu functionality is implemented as required.
+- [x] **3 pts**: Main menu functionality is implemented as required.
 
 ---
 
 ## Play Game Requirement (18 Points)
-- [ ] **2 pts**: Correctly prompt the user for the number of questions.
-- [ ] **7 pts**: Correctly generate a random command and 3 random descriptions.
-- [ ] **3 pts**: Verify the user's answer.
-- [ ] **2 pts**: Update player points correctly.
-- [ ] **4 pts**: Generate the correct number of questions as per user input.
+- [x] **2 pts**: Correctly prompt the user for the number of questions.
+- [x] **7 pts**: Correctly generate a random command and 3 random descriptions.
+- [x] **3 pts**: Verify the user's answer.
+- [x] **2 pts**: Update player points correctly.
+- [x] **4 pts**: Generate the correct number of questions as per user input.
 
 ---
 
 ## Additional Requirements (35 Points)
-- [ ] **5 pts**: Correct implementation of the "Load Previous Game" functionality.
-- [ ] **5 pts**: Correct implementation of the "Add Command" functionality.
+- [x] **5 pts**: Correct implementation of the "Load Previous Game" functionality.
+- [x] **5 pts**: Correct implementation of the "Add Command" functionality.
 - [ ] **5 pts**: Correct implementation of the "Remove Command" functionality.
-- [ ] **5 pts**: Correct implementation of the "Display All Commands" functionality.
-- [ ] **10 pts**: Correct implementation of the "Exit" functionality.
-- [ ] **4 pts**: Correctly write updated commands to `commands.csv`.
-- [ ] **3 pts**: Correctly write updated profiles to `profiles.csv`.
-- [ ] **2 pts**: Deallocate linked list memory properly.
-- [ ] **1 pt**: Close all open files.
+- [x] **5 pts**: Correct implementation of the "Display All Commands" functionality.
+- [x] **10 pts**: Correct implementation of the "Exit" functionality.
+- [x] **4 pts**: Correctly write updated commands to `commands.csv`.
+- [x] **3 pts**: Correctly write updated profiles to `profiles.csv`.
+- [x] **2 pts**: Deallocate linked list memory properly.
+- [x] **1 pt**: Close all open files.
 
 ---
 
 ## Style, Design, and Comments (6 Points)
-- [ ] **3 pts**: Appropriate class and top-down design principles are followed.
-- [ ] **3 pts**: Adherence to proper programming style and sufficient comments.
+- [x] **3 pts**: Appropriate class and top-down design principles are followed.
+- [x] **3 pts**: Adherence to proper programming style and sufficient comments.
 
 ---
 

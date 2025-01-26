@@ -10,6 +10,6 @@
 int main(int argc, const char * argv[]) {
     Game game;
     game.loadCommands();
-    game.displayCommands();
+    game.menuSelection();
     return 0;
 }

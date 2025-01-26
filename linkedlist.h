@@ -55,7 +55,7 @@ LinkedList& operator=(const LinkedList& other) {
     head = nullptr;
 
     if (other.head) {
-        head = new Node<T>(other.head->getData()); // Copy the first node
+        head = new Node<T>(other.head->getData());
         Node<T>* current = head;
         Node<T>* otherCurrent = other.head->getNext();
 
@@ -89,6 +89,11 @@ LinkedList& operator=(const LinkedList& other) {
     Node<T>* getHead() const {
         return head;
     }
+    
+    // Setter
+    void setHead(Node<T>* newHead) {
+    head = newHead;
+    }   
 
     // Display
     void display() const {
@@ -107,12 +112,12 @@ LinkedList& operator=(const LinkedList& other) {
             std::cout << "List is empty" << std::endl;
             return false;
         }
+
         Node<T>* current = head;
         Node<T>* previous = nullptr;
         Node<T>* temp;
 
         while(current != nullptr) {
-            // if data matches
             if (current->getData().command == commandToRemove) {
                 if (current == head) {
                     head = current->getNext();

@@ -5,9 +5,11 @@
 //  Created by Warren Christian on 1/24/25.
 //
 
-#include "readfile.h"
+#include "game.h"
 
 int main(int argc, const char * argv[]) {
-    readAndStore();
+    Game game;
+    game.loadCommands();
+    game.displayCommands();
     return 0;
 }

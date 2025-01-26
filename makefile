@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++20 -Wall -Wextra -w
+CXXFLAGS = -std=c++20 -Wall -Wextra -w -g
 
 # Target executable
 TARGET = pa1

@@ -19,13 +19,55 @@ class LinkedList {
 private:
     template <typename U>
     static constexpr bool isData = std::is_same<U, Data>::value;
-
     Node<T>* head;
 public:
     
     // Constructor
     LinkedList() : head(nullptr) {};
 
+    // Copy constructors
+    LinkedList(const LinkedList& other) : head(nullptr) {
+    if (other.head) {
+        head = new Node<T>(other.head->getData());
+        Node<T>* current = head;
+        Node<T>* otherCurrent = other.head->getNext();
+
+        while (otherCurrent) {
+            Node<T>* newNode = new Node<T>(otherCurrent->getData());
+            current->setNext(newNode);
+            current = newNode;
+            otherCurrent = otherCurrent->getNext();
+        }
+    }
+}
+
+LinkedList& operator=(const LinkedList& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    Node<T>* current = head;
+    while (current) {
+        Node<T>* next = current->getNext();
+        delete current;
+        current = next;
+    }
+    head = nullptr;
+
+    if (other.head) {
+        head = new Node<T>(other.head->getData()); // Copy the first node
+        Node<T>* current = head;
+        Node<T>* otherCurrent = other.head->getNext();
+
+        while (otherCurrent) {
+            Node<T>* newNode = new Node<T>(otherCurrent->getData());
+            current->setNext(newNode);
+            current = newNode;
+            otherCurrent = otherCurrent->getNext();
+        }
+    }
+    return *this;
+}
     // Destructor
     ~LinkedList() {
         Node<T>* current = head;

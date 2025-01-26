@@ -13,16 +13,15 @@
 #include "linkedlist.h"
 #include "data.h"
 
-bool readAndStore() {
+std::optional<LinkedList<Data>> readAndStore() {
     
     std::string filePath = "commands.csv";
     std::ifstream commandsfile;
     commandsfile.open(filePath);
     LinkedList<Data> list;
-
     if (commandsfile.fail()) {
         std::cout << "Error opening file" << std::endl;
-        return false;
+        return std::nullopt;
     }
 
     else {
@@ -44,8 +43,7 @@ bool readAndStore() {
             list.insertAtFront(data);         
         }
     }
-    list.display();
     commandsfile.close();
-    return true;
+    return list;
 }
 

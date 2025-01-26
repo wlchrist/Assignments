@@ -8,7 +8,7 @@
 
 ## Linked list Class Template (25 Points)
 - [x] **6 pts**: Correct implementation of `insertAtFront()` (used when loading from `commands.csv`).
-- [ ] **7 pts**: Correct implementation of `removeNode()` (used for removing commands from the list).
+- [x] **7 pts**: Correct implementation of `removeNode()` (used for removing commands from the list).
 - [x] **8 pts**: Implementation of other required list functions.
 - [x] **2 pts**: Correct data members in the `List` class.
 - [x] **2 pts**: Correct constructors and destructors for the `List` class.

@@ -1,4 +1,8 @@
 #include "ListMyJosephus.h"
+#include "Destination.h"
+#include <fstream>
+#include <sstream>
+#include <list>
 
 ListMyJosephus::ListMyJosephus() : m(0), n(0) {}
 
@@ -51,4 +55,27 @@ bool ListMyJosephus::operator!=(const ListMyJosephus& other) const {
 ostream& operator<<(ostream& os, const ListMyJosephus& dest) {
     os << "Position: " << dest.m << ", Name: " << dest.n;
     return os;
+}
+
+void ListMyJosephus::storeDestinations(const string& filename) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        return;
+    }
+    destinations.clear();
+    std::string line;
+    int position = 0;
+    while (std::getline(file, line)) {
+        std::istringstream lineStream(line);
+        std::string name;
+        while (std::getline(lineStream, name, ';')) {
+            destinations.push_back(Destination(position++, name));
+        }
+    }
+}
+
+void ListMyJosephus::printDestinations() {
+    for (const auto& dest : destinations) {
+        cout << "Index: " << dest.getPosition() << " | Name: " << dest.getName() << endl;
+    }
 }

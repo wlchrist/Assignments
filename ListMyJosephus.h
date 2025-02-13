@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <string>
-
+#include <list>
+#include "Destination.h"
 using std::string;
 using std::cout;
 using std::endl;
@@ -13,7 +14,7 @@ class ListMyJosephus {
 private:
     int m;
     int n;
-
+    std::list<Destination> destinations;
 public:
     // constructors
     ListMyJosephus();
@@ -42,6 +43,20 @@ public:
     bool operator==(const ListMyJosephus& other) const;
     bool operator!=(const ListMyJosephus& other) const;
     friend ostream& operator<<(ostream& os, const ListMyJosephus& dest);
+
+    // other
+    // empty container
+    void clear();
+    // return current size
+    int currentSize();
+    // bool is empty
+    bool isEmpty();
+    // eliminate destination
+    void eliminateDestination();
+    // store destinations from .csv
+    void storeDestinations(const string& filename = "Destinations.csv");
+    // print all destinations
+    void printDestinations();
 };
 
 #endif
